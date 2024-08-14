@@ -20,6 +20,8 @@ app.use(cors(corsOptions));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'tiny' : 'dev'));
 app.use(express.json());
 
+app.options('*', cors()) // include before other routes
+
 // routes
 app.use('/auth', auth);
 app.use('/mail', mail);

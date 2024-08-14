@@ -8,8 +8,15 @@ import {subscriber} from "./routes/subscriber";
 
 export const app: Express = express();
 
+const corsOptions = {
+    origin: 'https://newsletter.fritz.box', // Replace 'localhost' with your domain if different
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    optionsSuccessStatus: 204
+};
+
 // dependencies
-app.use(cors({origin: true, credentials: true}));
+app.use(cors(corsOptions));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'tiny' : 'dev'));
 app.use(express.json());
 

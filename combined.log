@@ -48,3 +48,4 @@
 {"level":"info","message":"Message sent: <c27fcd1e-5a0e-ab94-dc4f-75cde86b3827@kaff-os.de>","service":"subscribers-service"}
 {"level":"info","message":"server started at http://localhost:3000","service":"subscribers-service"}
 {"level":"info","message":"Connected to the SQLite database at /Users/gka/kaff-newsletter.sqlite","service":"subscribers-service"}
+{"level":"info","message":"server started at http://localhost:3000","service":"subscribers-service"}
